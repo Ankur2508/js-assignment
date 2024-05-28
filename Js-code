@@ -1,0 +1,28 @@
+const a=[];
+function mintNFT(name,age,gender) {
+    const nft={
+        'name':name,
+        'age':age,
+        'gender':gender
+    };
+    a.unshift(nft);
+}
+mintNFT('Ankur','20','male');
+mintNFT('Virat','37','male');
+mintNFT('kundu','21','male');
+mintNFT('Jony','20','male');
+mintNFT('Simran','20','female');
+
+function listofNFTs(){
+    for(x=0;x<a.length;x++){
+        console.log('\n');
+        console.log('name:'+ a[x].name);
+        console.log('age:'+ a[x].age);
+        console.log('gender:'+ a[x].gender);
+    }
+}
+function getTotalSupply() {
+    console.log("\ntotal NFT's : "+a.length);
+}
+listofNFTs();
+getTotalSupply();
